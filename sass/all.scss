@@ -2,8 +2,21 @@
 @import 'fonts';
 @import 'vars';
 
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+.button {
+  padding: 8px 25px;
+  border-radius: 4px;
+  background-color: $blue;
+  font-family: 'HelveticaNeueLTPro-Roman';
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+}
+
 #dashboard {
-  width: 1550px;
+  width: 100%;
   margin: 30px auto;
   min-height: 500px;
 
@@ -36,8 +49,27 @@
         padding-right: 20px;
       }
     }
+
     li:first-child {
       border-top: 1px solid $mercury;
+    }
+
+    li:nth-of-type(2n+1) {
+      background: $alabaster;
+    }
+  }
+
+  #bottom_menu {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+
+    }
+
+    .right {
+      padding-right: 20px;
     }
   }
 }

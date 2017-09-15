@@ -1,2 +1,13 @@
 $mercury: #E1E1E1;
 $dodger-blue: #3399FF;
+$alabaster: #F8F8F8;
+$blue: #268EFF;
+
+@font-face {
+  font-family:fronticons;
+  src: url(/fonts/icons/fronticons.ttf?l5bwd6) format('truetype'),
+        url(/fonts/icons/fronticons.woff?l5bwd6) format('woff'),
+        url(/fonts/icons/fronticons.svg?l5bwd6#fronticons) format('svg');
+  font-weight:400;
+  font-style:normal
+}
