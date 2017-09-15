@@ -11,8 +11,8 @@ class App extends React.Component {
     return (
       <div id="dashboard">
         <Route component={Tabs} />
-        <Route exact path="/details" component={Details} />
-        <Route exact path="/agenda" component={Agenda} />
+        <Route path="/details" component={Details} />
+        <Route path="/agenda/:id" component={Agenda} />
       </div>
     );
   }

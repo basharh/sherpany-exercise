@@ -1,7 +1,24 @@
+@import 'fonts';
 
 #dashboard {
   border: 1px solid blue;
   width: 1550px;
   margin: 30px auto;
   min-height: 500px;
+
+  #tabs {
+    border: 1px solid blue;
+    width: 200px;
+    display: flex;
+    font-family: 'HelveticaNeueLTPro-Roman';
+    .tab {
+      border: 1px solid red;
+      width: 200px;
+      font-size: 24px;
+    }
+
+    .tab.active {
+
+    }
+  }
 }
