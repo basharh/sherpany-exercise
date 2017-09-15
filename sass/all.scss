@@ -1,24 +1,43 @@
+@import 'reset';
 @import 'fonts';
+@import 'vars';
 
 #dashboard {
-  border: 1px solid blue;
   width: 1550px;
   margin: 30px auto;
   min-height: 500px;
 
   #tabs {
-    border: 1px solid blue;
     width: 200px;
     display: flex;
     font-family: 'HelveticaNeueLTPro-Roman';
     .tab {
-      border: 1px solid red;
       width: 200px;
       font-size: 24px;
+      text-align: center;
+      padding: 5px 20px;
     }
 
     .tab.active {
+      border-bottom: 1px solid $dodger-blue;
+    }
+  }
 
+  #items {
+    font-family: 'HelveticaNeueLTPro-Bd';
+    li {
+      padding: 20px;
+      padding-left: 50px;
+      font-size: 15px;
+      border-bottom: 1px solid $mercury;
+      display: flex;
+
+      .order {
+        padding-right: 20px;
+      }
+    }
+    li:first-child {
+      border-top: 1px solid $mercury;
     }
   }
 }
