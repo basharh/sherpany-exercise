@@ -19,6 +19,8 @@ $fa-font-path: "~font-awesome/fonts";
   width: 100%;
   margin: 30px auto;
   min-height: 500px;
+  box-sizing: border-box;
+  position: relative;
 
   #tabs {
     width: 200px;
@@ -69,7 +71,40 @@ $fa-font-path: "~font-awesome/fonts";
     }
 
     .right {
-      padding-right: 20px;
     }
+  }
+
+  #upload {
+    font-family: 'HelveticaNeueLTPro-Bd';
+    right: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: -4px -4px 8px rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: 80%;
+    top: 10px;
+    background-color: white;
+    border-radius: 4px;
+
+    #header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $mercury;
+
+      .title {
+      }
+
+      .close {
+      }
+    }
+
+    #drop {
+      height: 100%;
+    }
+
+
   }
 }
