@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Tabs from '../components/Tabs';
 import Details from '../components/Details';
 import BottomMenu from '../containers/BottomMenu';
-import Upload from '../components/Upload';
+import Upload from '../containers/Upload';
 
 import Agenda from '../containers/Agenda';
 

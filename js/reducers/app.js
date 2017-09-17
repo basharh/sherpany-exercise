@@ -1,4 +1,4 @@
-import { TOGGLE_UPLOAD } from '../actions/app';
+import { TOGGLE_UPLOAD, CLOSE_UPLOAD, ADD_FILES } from '../actions/app';
 
 const agendaItems = [
   'Admin',
@@ -14,12 +14,23 @@ export default (state = {
   activeTab: 'details',
   agenda: agendaItems,
   isUploadShown: true,
+  files: [],
 }, action) => {
   switch (action.type) {
     case TOGGLE_UPLOAD:
       return {
         ...state,
         isUploadShown: !state.isUploadShown,
+      }
+    case CLOSE_UPLOAD:
+      return {
+        ...state,
+        isUploadShown: false,
+      }
+    case ADD_FILES:
+      return {
+        ...state,
+        files: [...state.files, ...action.files],
       }
     default:
       return state;
