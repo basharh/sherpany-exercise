@@ -107,14 +107,25 @@ $fa-font-path: "~font-awesome/fonts";
       padding: 20px;
       border-bottom: 1px solid $mercury;
       box-sizing: border-box;
+      font-family: 'HelveticaNeueLTPro-Roman';
 
       .dropbox {
         color: $blue;
         padding: 20px;
-        width: 80%;
         margin: 0px auto;
         text-align: center;
         border: dashed 2px $blue;
+      }
+
+      .openDialog {
+        font-size: 12px;
+        text-align: right;
+        margin: 5px auto;
+
+        a {
+          color: $blue;
+          cursor: pointer;
+        }
       }
     }
 
