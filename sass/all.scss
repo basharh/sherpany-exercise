@@ -76,7 +76,7 @@ $fa-font-path: "~font-awesome/fonts";
   }
 
   #upload {
-    font-family: 'HelveticaNeueLTPro-Bd';
+    font-family: 'HelveticaNeueLTPro-Roman';
     right: 20px;
     position: absolute;
     display: flex;
@@ -94,6 +94,7 @@ $fa-font-path: "~font-awesome/fonts";
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $mercury;
+      font-family: 'HelveticaNeueLTPro-Bd';
 
       .title {
       }
@@ -129,6 +130,17 @@ $fa-font-path: "~font-awesome/fonts";
       }
     }
 
+    #available {
+      li {
+        padding: 15px 10px;
+        padding-left: 10px;
+        font-size: 13px;
+        border-bottom: 1px solid $mercury;
+      }
 
+      li:nth-of-type(2n+1) {
+        background: $alabaster;
+      }
+    }
   }
 }

@@ -28,8 +28,8 @@ export default function Upload(props) {
       </div>
       <div id="available">
         <ul>
-          { /* <li>document 1</li>
-               <li>document 2</li> */ }
+          <li>document 1</li>
+          <li>document 2</li>
         </ul>
       </div>
       <div className="bottom_menu">
