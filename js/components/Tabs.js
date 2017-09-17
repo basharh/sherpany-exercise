@@ -1,24 +1,28 @@
 import React from 'react';
 
-function getTab(tab, activeTab) {
-  let key = tab.id;
-  if ( tab.id === activeTab )
-    return <div key={key} className="tab active">{tab.title}</div>;
+const tabs = [
+  { title: 'Details', id: 'details' },
+  { title: 'Agenda', id: 'agenda' },
+];
 
-  return <div key={key} className="tab">{tab.title}</div>;
+function getTab(tab, activeTab, onClick) {
+  let key = tab.id;
+  let title = <span onClick={() => onClick(key)}>{tab.title}</span>;
+
+  if ( tab.id === activeTab )
+    return <div key={key} className="tab active">{title}</div>;
+
+  return <div key={key} className="tab">{title}</div>;
 }
 
 export default function Tabs(props) {
-  const tabs = [
-    { title: 'Details', id: 'details' },
-    { title: 'Agenda', id: 'agenda' },
-  ];
-  let { location: { pathname } } = props;
+  let { location: { pathname }, push } = props;
   let activeTab = pathname.slice(1).split('/')[0];
+  let handleTabClick = (tabId) => push(`/${tabId}`);
 
   return (
     <div id="tabs">
-      { tabs.map((tab) => getTab(tab, activeTab)) }
+      { tabs.map((tab) => getTab(tab, activeTab, handleTabClick)) }
     </div>
   );
 }

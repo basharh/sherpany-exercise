@@ -13,7 +13,7 @@ const agendaItems = [
 export default (state = {
   activeTab: 'details',
   agenda: agendaItems,
-  isUploadShown: true,
+  isUploadShown: false,
   files: [],
 }, action) => {
   switch (action.type) {

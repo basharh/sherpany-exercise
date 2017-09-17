@@ -2,11 +2,11 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import Tabs from '../components/Tabs';
 import Details from '../components/Details';
+
+import Tabs from '../containers/Tabs';
 import BottomMenu from '../containers/BottomMenu';
 import Upload from '../containers/Upload';
-
 import Agenda from '../containers/Agenda';
 
 class App extends React.Component {
@@ -26,6 +26,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => ({
   isUploadShown: state.app.isUploadShown,
+  location: state.router.location,
 });
 
 export default connect(mapStateToProps)(App);
