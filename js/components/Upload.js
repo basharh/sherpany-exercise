@@ -20,7 +20,7 @@ export default function Upload(props) {
         </div>
       </div>
       <div id="drop">
-        <DropZone onDrop={onDrop} accept="image/*" multiple={true} className="dropbox"
+        <DropZone onDrop={onDrop} multiple={true} className="dropbox"
           ref={(input) => { dropzone = input; }}>
           <i className="fa fa-plus"></i>&nbsp;Drop new documents here
         </DropZone>
