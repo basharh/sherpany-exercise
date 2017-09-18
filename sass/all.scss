@@ -22,6 +22,7 @@ $fa-font-path: "~font-awesome/fonts";
   min-height: 500px;
   box-sizing: border-box;
   position: relative;
+  font-family: 'HelveticaNeueLTPro-Roman';
 
   #tabs {
     width: 200px;
@@ -43,26 +44,40 @@ $fa-font-path: "~font-awesome/fonts";
     }
   }
 
-  #items {
-    font-family: 'HelveticaNeueLTPro-Bd';
-    li {
-      padding: 20px;
-      padding-left: 50px;
-      font-size: 15px;
-      border-bottom: 1px solid $mercury;
-      display: flex;
+  #details {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    justify-content: center;
 
-      .order {
-        padding-right: 20px;
+    .label {
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+
+  #agenda {
+    #items {
+      font-family: 'HelveticaNeueLTPro-Bd';
+      li {
+        padding: 20px;
+        padding-left: 50px;
+        font-size: 15px;
+        border-bottom: 1px solid $mercury;
+        display: flex;
+
+        .order {
+          padding-right: 20px;
+        }
       }
-    }
 
-    li:first-child {
-      border-top: 1px solid $mercury;
-    }
+      li:first-child {
+        border-top: 1px solid $mercury;
+      }
 
-    li:nth-of-type(2n+1) {
-      background: $alabaster;
+      li:nth-of-type(2n+1) {
+        background: $alabaster;
+      }
     }
   }
 
