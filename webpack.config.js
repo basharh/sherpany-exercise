@@ -33,7 +33,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'fonts/[name].[ext]'
+          name: '/fonts/[name].[ext]'
         }
       }
     ]

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Details from '../components/Details';
@@ -14,6 +14,7 @@ class App extends React.Component {
     let { isUploadShown } = this.props;
     return (
       <div id="dashboard">
+        <Switch><Redirect exact from="/" to="/details" /></Switch>
         <Route component={Tabs} />
         <Route path="/details" component={Details} />
         <Route path="/agenda" component={Agenda} />
