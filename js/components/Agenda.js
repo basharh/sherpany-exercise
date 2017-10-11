@@ -12,6 +12,10 @@ export default function Agenda(props) {
                   <div className="title">{item}</div>
                 </li>)
             }
+            <li key={agenda.length}>
+              <div className="order">{agenda.length+1}</div>
+              <input type="text" placeholder="Enter a new Agenda Item"/>
+            </li>
           </ul>
       </div>
     </div>

@@ -7,7 +7,6 @@ const agendaItems = [
   'Management Update',
   'Country Managers Outlook',
   'Sales Marketing',
-  'Enter a new Agenda Item',
 ];
 
 export default (state = {

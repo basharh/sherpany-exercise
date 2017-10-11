@@ -65,6 +65,7 @@ $fa-font-path: "~font-awesome/fonts";
         font-size: 15px;
         border-bottom: 1px solid $mercury;
         display: flex;
+        align-items: center;
 
         .order {
           padding-right: 20px;
@@ -77,6 +78,21 @@ $fa-font-path: "~font-awesome/fonts";
 
       li:nth-of-type(2n+1) {
         background: $alabaster;
+      }
+
+      li:last-child {
+        .order {
+          color: grey;
+        }
+
+        input {
+          font-family: inherit;
+          font-size: 14px;
+          border: none;
+          background: transparent;
+          width: 200px;
+          line-height: 22px;
+        }
       }
     }
   }
