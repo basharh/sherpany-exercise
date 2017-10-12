@@ -85,13 +85,13 @@ $fa-font-path: "~font-awesome/fonts";
           color: grey;
         }
 
-        input {
+        input, input:focus {
           font-family: inherit;
           font-size: 14px;
           border: none;
           background: transparent;
+          outline: none;
           width: 200px;
-          line-height: 22px;
         }
       }
     }

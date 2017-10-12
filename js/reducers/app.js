@@ -1,4 +1,4 @@
-import { TOGGLE_UPLOAD, CLOSE_UPLOAD, ADD_FILES } from '../actions/app';
+import { TOGGLE_UPLOAD, CLOSE_UPLOAD, ADD_FILES, ADD_ITEM } from '../actions/app';
 
 const agendaItems = [
   'Admin',
@@ -30,6 +30,11 @@ export default (state = {
       return {
         ...state,
         files: [...state.files, ...action.files],
+      }
+    case ADD_ITEM:
+      return {
+        ...state,
+        agenda: [...state.agenda, action.text],
       }
     default:
       return state;
