@@ -1,13 +1,34 @@
 import { TOGGLE_UPLOAD, CLOSE_UPLOAD, ADD_FILES, ADD_ITEM } from '../actions/app';
 
 const agendaItems = [
-  'Admin',
-  'Minutes Last Meeting',
-  'Performance / Key Initiatives',
-  'Management Update',
-  'Country Managers Outlook',
-  'Sales Marketing',
+  { text: 'Admin', files: [] },
+  { text: 'Minutes Last Meeting', files: [] },
+  { text: 'Performance / Key Initiatives', files: [] },
+  { text: 'Management Update', files: [] },
+  { text: 'Country Managers Outlook', files: [] },
+  { text: 'Sales Marketing', files: [] },
 ];
+
+function isFileForAgendaItem(agendaItem, file) {
+  let tokens = agendaItem.text.toLowerCase().split(' ');
+
+  // true if file name contains every token in agenda text
+  return tokens.every((token) => file.name.toLowerCase().indexOf(token) > -1);
+}
+
+function addFilesToAgenda(agenda, files) {
+  return agenda.map((agendaItem) => {
+    let tokens = agendaItem.text.toLowerCase().split(' ');
+
+    let matchingFiles = files.filter((file) => {
+      return isFileForAgendaItem(agendaItem, file);
+    });
+
+    agendaItem.files = agendaItem.files.concat(matchingFiles);
+
+    return agendaItem;
+  });
+}
 
 export default (state = {
   activeTab: 'details',
@@ -27,14 +48,16 @@ export default (state = {
         isUploadShown: false,
       }
     case ADD_FILES:
+      let newAgenda = addFilesToAgenda(state.agenda, action.files);
       return {
         ...state,
-        files: [...state.files, ...action.files],
+        agenda: [...newAgenda],
       }
     case ADD_ITEM:
+      let newItem = { text: action.text, files: [] };
       return {
         ...state,
-        agenda: [...state.agenda, action.text],
+        agenda: [...state.agenda, newItem],
       }
     default:
       return state;

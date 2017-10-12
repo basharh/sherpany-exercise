@@ -35,7 +35,7 @@ export default function Upload(props) {
             </ul> : null }
       </div>
       <div className="bottom_menu">
-        { /* <div className="button">Add</div> */ }
+        <div className="button">Add</div>
       </div>
     </div>
   );

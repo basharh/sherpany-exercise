@@ -19,7 +19,8 @@ export default function Agenda(props) {
             { agenda.map((item, i) =>
                 <li key={i}>
                   <div className="order">{i+1}</div>
-                  <div className="title">{item}</div>
+                  <div className="title">{item.text}</div>
+                  <div className="files_count">({item.files.length})</div>
                 </li>)
             }
             <li key={agenda.length}>

@@ -70,6 +70,10 @@ $fa-font-path: "~font-awesome/fonts";
         .order {
           padding-right: 20px;
         }
+
+        .files_count {
+          margin-left: 15px;
+        }
       }
 
       li:first-child {
@@ -177,6 +181,13 @@ $fa-font-path: "~font-awesome/fonts";
       li:nth-of-type(2n+1) {
         background: $alabaster;
       }
+    }
+
+    .bottom_menu {
+      margin-top: auto;
+      padding: 10px;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
