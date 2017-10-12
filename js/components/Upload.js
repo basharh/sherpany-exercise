@@ -3,10 +3,10 @@ import DropZone from 'react-dropzone';
 
 export default function Upload(props) {
   let dropzone;
-  let { addFiles, closeUpload, files } = props;
+  let { uploadFiles, closeUpload, addFiles, files } = props;
 
   function onDrop(files) {
-    addFiles(files);
+    uploadFiles(files);
   }
 
   return (
@@ -35,7 +35,7 @@ export default function Upload(props) {
             </ul> : null }
       </div>
       <div className="bottom_menu">
-        <div className="button">Add</div>
+        <div className="button" onClick={addFiles}>Add</div>
       </div>
     </div>
   );
